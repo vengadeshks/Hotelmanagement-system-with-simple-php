@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>booking-form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+    
+    body
+{
+    margin: 0;
+    padding: 0;
+    background: url(bg3.jpg);
+    background-size: cover;
+    font-family: times-new-roman;
+    font-size:26px;
+    color: lightgray;    
+    
+        }
+.control-form
+{
+    position: absolute;
+    top:10%;
+    left:20%;
+   // transform: translate(-50%,-50%);
+    width:800px;
+   // height:470px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.5);
+}
+
+        button
+{
+    width:100px;
+    height:30px;
+}
+    </style>
+</head>
+<body>
+    <a href="logout.php"><i class="fas fa-sign-in-alt">LOGOUT </i> </a><br><br>
+  
+    
+	<form action="db.php" method="post">
+  <div class='control-form'>
+  <div class="form-group">
+      <center><h2 class="heading">Booking & contact</h2></center>
+    <div class="controls">
+    	 <label for="name"> &emsp;&emsp;&emsp;&emsp;&emsp; Name &nbsp; &nbsp; &nbsp;</label>
+      <input type="text" id="name" class="floatLabel" name="name">
+     
+    </div> <br> 
+    <div class="controls">
+    	 <label for="phone">&emsp;&emsp;&emsp;&emsp;&emsp; Phone &nbsp; &nbsp; &nbsp;</label>
+      <input type="tel" id="phone" class="floatLabel" name="phone">
+      </div> <br> 
+          <div class="controls">
+          	 <label for="city">&emsp;&emsp;&emsp;&emsp;&emsp; City &nbsp; &nbsp; &nbsp; &nbsp;</label>
+            <input type="text" id="city" class="floatLabel" name="city">
+           
+          </div>   <br>        
+        
+        
+          <div class="controls">
+          	 <label for="post-code">&emsp;&emsp;&emsp;&emsp;&emsp; Pin Code</label>
+            <input type="text" id="post-code" class="floatLabel" name="post-code">
+           
+          </div> <br>         
+        
+
+      <div class="controls">
+      	   <label for="country">&emsp;&emsp;&emsp;&emsp;&emsp; Country &nbsp;</label>
+        <input type="text" id="country" class="floatLabel" name="country">
+     
+      </div> <br>
+  </div>
+  
+  <div class="form-group">
+    <h2 class="heading">&emsp;&emsp;&emsp;&emsp;&emsp; Details</h2>
+    
+      <div class="controls">
+      	 <label for="arrive" class="label-date">&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;Check-in</label>
+        <input type="date" id="arrive" class="floatLabel" name="in" value="<?php echo date('Y-m-d'); ?>">
+       
+
+      </div> <br>      
+    </div>
+    
+      <div class="controls">
+      	 <label for="depart" class="label-date">&emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa fa-calendar"></i>&nbsp;&nbsp;Check-out</label>
+        <input type="date" id="depart" class="floatLabel" name="out" value="<?php echo date('Y-m-d'); ?>" />
+       
+      </div>   <br>    
+    
+      
+      <div class="controls">
+      &emsp;&emsp;&emsp;&emsp;&emsp;  <i class="fa fa-sort"></i>
+
+          <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+        <select class="floatLabel">
+          <option value="blank"></option>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+        </select>
+      
+      </div>    <br>   
+  
+  
+    <div class="controls">
+        &emsp;&emsp;&emsp;&emsp;&emsp; <i class="fa fa-sort"></i>
+
+       <label for="fruit">Room</label>
+      <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="deluxe" selected>With Bathroom</option>
+        <option value="Zuri-zimmer">Without Bathroom</option>
+      </select>
+     
+     </div>   <br>   
+
+
+ 
+    <div class="controls">
+      &emsp;&emsp;&emsp;&emsp;&emsp;<i class="fa fa-sort"></i>
+
+       <label for="fruit">Bedding</label>
+      <select class="floatLabel">
+        <option value="blank"></option>
+        <option value="single-bed">Zweibett</option>
+        <option value="double-bed" selected>Doppelbett</option>
+      </select>
+     
+     </div>   <br>   
+   
+      <div class="grid">
+        <p class="info-text"> &emsp;&emsp;&emsp;&emsp;&emsp;Please describe your needs e.g. Extra beds, children's cots</p>
+       
+        <div class="controls">
+        	   &emsp;&emsp;&emsp;&emsp;&emsp; <label for="comments">Comments</label>
+          <textarea name="comments" class="floatLabel" id="comments"></textarea>
+       
+          </div> <br>
+          &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;  <button type="submit" value="Submit" class="col-1-4">Book</button>
+      </div>   <br>
+        </div>
+</form>
+</body>
+</html>
